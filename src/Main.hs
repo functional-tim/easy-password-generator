@@ -9,6 +9,7 @@ import           System.Console.CmdArgs
 import           System.Environment
 import           System.Exit
 
+import qualified Data.Char              as Char
 import qualified Data.Text              as DText
 import qualified Data.Text.IO           as DText
 
@@ -69,6 +70,12 @@ rand n = do
     return (r:rs)
 
 
+-- auxiliary function to capitalize first letter of every word
+
+capitalized :: String -> String
+capitalized (head:tail) = Char.toUpper head : tail
+
+
 -- password creation function
 --
 -- "str1" is Argument 1 and "str2" is Argument 2. These get interlaced in between the
@@ -86,7 +93,7 @@ password str1 str2 xs = head xs ++ str1 ++ password str2 str1 (tail xs)
 prePassword :: [DText.Text] -> [Int] -> Int -> IO [String]
 prePassword xs ys 0 = return []
 prePassword xs ys n = do
-    let r = DText.unpack x
+    let r = capitalized (DText.unpack x)
     rs <- prePassword (delete x xs) (tail ys) (n-1)
     return (r:rs)
       where x = xs !! mod (head ys) (Data.List.length xs - 1)
