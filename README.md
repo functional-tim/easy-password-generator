@@ -12,11 +12,13 @@ The file has to have one word per line.
 To make the passwords more secure two seperators are choosen. These seperators will alternate after every word.
 One operator should be a special character and the other seperator should be a number.
 
-## Example use
+## Example uses
 
 ```
-$> easy-password example_word_files/words_alpha.txt % 5
-
+$> easy-password example_word_files/word_list.txt % 5
+fewer%trees5cleaning%kitty5
+$> easy-password --number=5 example_word_files/word_list.txt '$' 8
+symbol$teacher8requieres$minimal8pills$
 ```
 
 ## Credits
