@@ -40,12 +40,12 @@ data EasyPasswordGenerator = EasyPasswordGenerator {arg1 :: String, arg2 :: Stri
 
 create = EasyPasswordGenerator
     {arg1 = def &= typ "file" &= argPos 0
-    ,arg2 = def &= typ "seperator 1" &= argPos 1
-    ,arg3 = def &= typ "seperator 2" &= argPos 2
+    ,arg2 = def &= typ "seperator1" &= argPos 1
+    ,arg3 = def &= typ "seperator2" &= argPos 2
     ,number = 4 &= typ "number" &= help "Number of words used for the password"
-    } &= help "A program to create passwords like in xkcd.com/936"
-    &= program "easypassword"
-    &= summary "easypassword v0.1"
+    } &= help "A program to create passwords like in xkcd.com/936.\nThe file has to have one word per line.\nOne seperator should be a special character.\nThe other seperator should be a number."
+    &= program "easy-password"
+    &= summary "easy-password v0.1"
 
 
 -- auxiliary functions to get the arguments
