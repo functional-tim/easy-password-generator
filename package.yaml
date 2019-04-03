@@ -1,0 +1,51 @@
+name:                easy-password-generator
+version:             0.1.0.0
+github:              "githubuser/easy-password-generator"
+license:             Apache
+author:              "crazymind102"
+maintainer:          "crazymind102@gmail.com"
+copyright:           "2019 crazymind102"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/easy-password-generator#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- cmdargs
+- raaz
+- text
+
+library:
+  source-dirs: src
+
+executables:
+  easy-password:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - easy-password-generator
+
+tests:
+  easy-password-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - easy-password-generator
