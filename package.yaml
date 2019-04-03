@@ -1,7 +1,7 @@
 name:                easy-password-generator
 version:             0.1.0.0
-github:              "githubuser/easy-password-generator"
-license:             Apache
+github:              "CrazyMind102/easy-password-generator"
+license:             Apache2
 author:              "crazymind102"
 maintainer:          "crazymind102@gmail.com"
 copyright:           "2019 crazymind102"
