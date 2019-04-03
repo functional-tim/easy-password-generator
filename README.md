@@ -18,9 +18,9 @@ These seperators will alternate after every word. One operator should be a speci
 
 ```
 $> easy-password example_word_files/word_list.txt % 5
-fewer%trees5cleaning%kitty5
+Fewer%Trees5Cleaning%Kitty5
 $> easy-password --number=5 example_word_files/word_list.txt '$' 8
-symbol$teacher8requieres$minimal8pills$
+Symbol$Teacher8Requieres$Minimal8Pills$
 ```
 
 ## Credits
