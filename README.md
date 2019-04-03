@@ -14,13 +14,29 @@ To make the passwords more secure two seperators are choosen.
 
 These seperators will alternate after every word. One operator should be a special character and the other seperator should be a number.
 
-## Example uses
+### Example uses
 
 ```
 $> easy-password example_word_files/word_list.txt % 5
 Fewer%Trees5Cleaning%Kitty5
 $> easy-password --number=5 example_word_files/word_list.txt '$' 8
 Symbol$Teacher8Requieres$Minimal8Pills$
+```
+
+## How to install
+
+You need to download stack or install it on your system through your package manager.
+
+Then you download the repository through git or manual.
+
+After unpacking or downloading from git you have to switch into the folder of easy-password-generator.
+
+Then run `stack setup` followed by `stack install`.
+
+```
+$> cd easy-password-generator
+$> stack setup
+$> stack install
 ```
 
 ## Credits
