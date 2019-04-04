@@ -17,9 +17,9 @@ These seperators will alternate after every word. One operator should be a speci
 ### Example uses
 
 ```
-$> easy-password example_word_files/word_list.txt % 5
+$ > easy-password example_word_files/word_list.txt % 5
 Fewer%Trees5Cleaning%Kitty5
-$> easy-password --number=5 example_word_files/word_list.txt '$' 8
+$ > easy-password --number=5 example_word_files/word_list.txt '$' 8
 Symbol$Teacher8Requieres$Minimal8Pills$
 ```
 
@@ -34,9 +34,9 @@ After unpacking or downloading from git you have to switch into the folder of ea
 Then run `stack setup` followed by `stack install`.
 
 ```
-$> cd easy-password-generator
-$> stack setup
-$> stack install
+$ > cd easy-password-generator
+$ > stack setup
+$ > stack install
 ```
 
 ## Credits
