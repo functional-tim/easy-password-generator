@@ -1,10 +1,10 @@
 name:                easy-password-generator
-version:             0.1.0.0
+version:             1.0.0.0
 github:              "CrazyMind102/easy-password-generator"
 license:             BSD3
 author:              "crazymind102"
 maintainer:          "crazymind102@gmail.com"
-copyright:           "2019 crazymind102"
+copyright:           "2019 CrazyMind102"
 
 extra-source-files:
 - README.md
