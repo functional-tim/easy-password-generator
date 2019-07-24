@@ -46,7 +46,7 @@ create = EasyPasswordGenerator
     ,number = 4 &= typ "number" &= help "Number of words used for the password"
     } &= help "A program to create passwords like in xkcd.com/936.\nThe file has to have one word per line.\nOne seperator should be a special character.\nThe other seperator should be a number."
     &= program "easy-password"
-    &= summary "easy-password v0.1"
+    &= summary "easy-password v1.0"
 
 
 -- auxiliary functions to get the arguments
