@@ -12,7 +12,7 @@ The file has to have one word per line.
 
 To make the passwords more secure two seperators are choosen.
 
-These seperators will alternate after every word. One operator should be a special character and the other seperator should be a number.
+These seperators will alternate after every word. One seperator should be a special character and the other seperator should be a number.
 
 ### Example uses
 
