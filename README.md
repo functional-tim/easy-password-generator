@@ -1,6 +1,7 @@
 # easy-password-generator
 
 This password generator was inspired by this comic of Randall Munroe: [https://xkcd.com/936/](https://xkcd.com/936/).
+It is cryptographically secure if the machine you are using it on is secure.
 
 ## Usage
 
