@@ -4,7 +4,7 @@ This password generator was inspired by this comic of Randall Munroe: [https://x
 
 It is cryptographically secure if the machine you are using it on is secure.
 
-## Usage
+## How to use
 
 ```
 easy-password [OPTIONS] file seperator1 seperator2
