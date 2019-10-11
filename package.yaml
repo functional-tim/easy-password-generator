@@ -29,9 +29,9 @@ library:
     source-dirs: src
 
 executables:
-  easy-password:
+  easy-password-generator:
     main:                Main.hs
-    source-dirs:         src
+    source-dirs:         app
     ghc-options:
     - -threaded
     - -rtsopts
@@ -40,7 +40,7 @@ executables:
     - easy-password-generator
 
 tests:
-  easy-password-test:
+  easy-password-generator-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
