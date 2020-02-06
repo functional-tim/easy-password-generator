@@ -1,9 +1,9 @@
 {-# OPTIONS_GHC -fno-cse #-}
 
 module Lib
-    ( rand
+    ( chooseWords
+    , rand
     , password
-    , prePassword
     ) where
 
 
@@ -27,6 +27,12 @@ rand n = do
     rs <- rand (n-1)
     return (r:rs)
 
+rand1 :: [Int] -> Int -> IO [Int]
+rand1 xs 0 = return []
+rand1 xs n = do
+    let r = (mod (head xs) 6) + 1
+    rs <- rand1 (tail xs) (n - 1)
+    return (r:rs)
 
 -- auxiliary function to capitalize first letter of every word
 
@@ -48,10 +54,10 @@ password str1 str2 xs = head xs ++ str1 ++ password str2 str1 (tail xs)
 --
 -- Creates a list of random words with the help of a list of random numbers.
 
-prePassword :: [DText.Text] -> [Int] -> Int -> IO [String]
-prePassword xs ys 0 = return []
-prePassword xs ys n = do
+chooseWords :: [DText.Text] -> [Int] -> Int -> IO [String]
+chooseWords xs ys 0 = return []
+chooseWords xs ys n = do
     let r = capitalized (DText.unpack x)
-    rs <- prePassword (delete x xs) (tail ys) (n-1)
+    rs <- chooseWords (delete x xs) (tail ys) (n-1)
     return (r:rs)
       where x = xs !! mod (head ys) (Data.List.length xs - 1)

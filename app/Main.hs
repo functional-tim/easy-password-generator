@@ -2,6 +2,8 @@
 {-# OPTIONS_GHC -fno-cse #-}
 
 module Main where
+
+
 import           Lib
 import           System.Console.CmdArgs
 import           System.Exit
@@ -48,7 +50,7 @@ main = do
     -- list with random numbers
     nums <- rand (pullInt args)
     -- creating of a random list of words
-    list <- prePassword wordlist nums (pullInt args)
+    list <- chooseWords wordlist nums (pullInt args)
     -- generate password
     putStrLn (password (pullOut args !! 1) (pullOut args !! 2) list)
     -- exit
