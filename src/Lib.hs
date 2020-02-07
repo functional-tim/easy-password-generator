@@ -23,16 +23,12 @@ import qualified Data.Text.IO           as DText
 rand :: Int -> IO [Int]
 rand 0 = return []
 rand n = do
-    r  <- insecurely (random :: RandM Int)
+    r  <- insecurely ran
     rs <- rand (n-1)
     return (r:rs)
+        where ran :: RandM Int
+              ran = random
 
-rand1 :: [Int] -> Int -> IO [Int]
-rand1 xs 0 = return []
-rand1 xs n = do
-    let r = (mod (head xs) 6) + 1
-    rs <- rand1 (tail xs) (n - 1)
-    return (r:rs)
 
 -- auxiliary function to capitalize first letter of every word
 
