@@ -14,7 +14,6 @@ import qualified Data.Text.IO           as DText
 
 
 -- Datatype for cmdArgs
-
 data EasyPasswordGenerator = EasyPasswordGenerator {arg1 :: String, arg2 :: String, arg3 :: String, number :: Int} deriving(Data, Show, Typeable)
 
 createEasyPasswordGenerator = EasyPasswordGenerator
@@ -28,7 +27,6 @@ createEasyPasswordGenerator = EasyPasswordGenerator
 
 
 -- auxiliary functions to get the arguments
-
 pullOut :: EasyPasswordGenerator -> [String]
 pullOut (EasyPasswordGenerator arg1 arg2 arg3 arg4) = [arg1, arg2, arg3]
 
@@ -39,9 +37,7 @@ pullInt (EasyPasswordGenerator arg1 arg2 arg3 arg4) = arg4
 -- main function
 --
 -- The function gets the arguments and creates then a easy to remember but secure password.
-
 --main = cmdArgs createEasyPasswordGenerator >>= \args -> fmap DText.lines (DText.readFile (head (pullOut args))) >>= \wordlist -> rand (pullInt args) >>= \nums -> prePassword wordlist nums (pullInt args) >>= \list -> putStrLn (password (pullOut args !! 1) (pullOut args !! 2) list) >>= \_ -> exitSuccess
-
 main = do
     -- get the arguments from create
     args <- cmdArgs createEasyPasswordGenerator

@@ -1,6 +1,6 @@
 # easy-password-generator
 
-This password generator was inspired by this comic of Randall Munroe: [https://xkcd.com/936/](https://xkcd.com/936/).
+This password generator was inspired by this comic of Randall Munroe: https://xkcd.com/936/.
 
 It is cryptographically secure if the machine you are using it on is secure.
 
@@ -26,6 +26,7 @@ Symbol$Teacher8Requieres$Minimal8Pills$
 ```
 
 ## How to install
+### Using stack
 
 You need to download stack or install it on your system through your package manager.
 
@@ -41,7 +42,25 @@ $ > stack setup
 $ > stack install
 ```
 
+### Using cabal
+
+You need to download cabal or install it on your system trhough your package manager.
+
+Then  you download the repository through git or manual.
+
+After unpacking or downloading from git you have to switch into the folder of easy-password generator.
+
+Then run `cabal new-install`.
+
+
+```
+$ > cd easy-password-generator
+$ > cabal new-install
+```
+
+
 ## Credits
 
 - Randall Munroe for the idea
-- first20hours for the word lists [https://github.com/first20hours/google-10000-english](https://github.com/first20hours/google-10000-english)
+- Piyush P Kurur for the cryptographic library [raaz](https://hackage.haskell.org/package/raaz-0.2.1)
+- first20hours for the [word lists](https://github.com/first20hours/google-10000-english)
