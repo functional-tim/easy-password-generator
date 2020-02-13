@@ -19,7 +19,7 @@ import qualified Data.Text.IO           as DText
 {-|
     Auxiliary function for random numbers.
     Creates a list of random numbers.  The size of the list is the input.
-    The numbers are created by acryptographically secure random number generator (raaz).
+    The numbers are created by a cryptographically secure random number generator (raaz).
 -}
 rand :: Int -> IO [Int]
 rand 0 = return []
