@@ -1,8 +1,15 @@
+{-
+    Main.hs - Console program to create the password.
+
+    (C) 2020 Tim Gravert <crazymind102@googlemail.com>
+
+    License: BSD 3-Clause
+-}
+
 {-# LANGUAGE DeriveDataTypeable #-}
 {-# OPTIONS_GHC -fno-cse #-}
 
 module Main where
-
 
 import           Lib
 import           System.Console.CmdArgs
@@ -14,13 +21,18 @@ import qualified Data.Text.IO           as DText
 
 
 -- Datatype for cmdArgs
-data EasyPasswordGenerator = EasyPasswordGenerator {arg1 :: String, arg2 :: String, arg3 :: String, number :: Int} deriving(Data, Show, Typeable)
+data EasyPasswordGenerator = EasyPasswordGenerator
+  { arg1   :: String
+  , arg2   :: String
+  , arg3   :: String
+  , number :: Int
+  } deriving(Data, Show, Typeable)
 
 createEasyPasswordGenerator = EasyPasswordGenerator
-    {arg1 = def &= typ "file" &= argPos 0
-    ,arg2 = def &= typ "seperator1" &= argPos 1
-    ,arg3 = def &= typ "seperator2" &= argPos 2
-    ,number = 4 &= typ "number" &= help "Number of words used for the password"
+    { arg1 = def &= typ "file" &= argPos 0
+    , arg2 = def &= typ "seperator1" &= argPos 1
+    , arg3 = def &= typ "seperator2" &= argPos 2
+    , number = 4 &= typ "number" &= help "Number of words used for the password"
     } &= help "A program to create passwords like in xkcd.com/936.\nThe file has to have one word per line.\nOne seperator should be a special character.\nThe other seperator should be a number."
     &= program "easy-password"
     &= summary "easy-password v1.0"

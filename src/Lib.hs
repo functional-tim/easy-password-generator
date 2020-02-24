@@ -1,3 +1,11 @@
+{-|
+    Lib.hs - Library to create the password
+
+    (C) 2020 Tim Gravert <crazymind102@googlemail.com>
+
+    License: BSD 3-Clause
+-}
+
 {-# OPTIONS_GHC -fno-cse #-}
 
 module Lib
@@ -5,7 +13,6 @@ module Lib
     , rand
     , password
     ) where
-
 
 import           Data.List
 import           Raaz
