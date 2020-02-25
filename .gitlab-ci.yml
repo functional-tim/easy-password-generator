@@ -7,3 +7,9 @@ build:
   stage: build
   script:
     - make build
+
+cache:
+  paths:
+    - .stack
+    - .stack-work
+    - target
