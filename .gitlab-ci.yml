@@ -1,15 +1,26 @@
-image: fpco/stack-build:lts-8.15
-
 stages:
+  - license_scanning
   - build
 
-build:
-  stage: build
-  script:
-    - make build
+variables:
+  DOCKER_DRIVER: overlay2
+  STACK_ROOT: ${CI_PROJECT_DIR}/.stack
 
-cache:
-  paths:
-    - .stack
-    - .stack-work
-    - target
+build-backend:
+  stage: build
+  image: haskell:latest
+  cache:
+    paths:
+      - ${STACK_ROOT}
+      - .stack-work
+  script:
+    - curl "https://gitlab.com/CrazyMind102/easy-password-generator/-/raw/master/LICENSE?inline=false" > LICENSE
+    - stack
+      --stack-root ${STACK_ROOT}
+      build
+
+license_scanning:
+  stage: .post
+
+include:
+  - template: License-Scanning.gitlab-ci.yml
