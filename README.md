@@ -26,24 +26,8 @@ Symbol$Teacher8Requieres$Minimal8Pills$
 ```
 
 ## How to install
-### Using stack
-
-You need to download stack or install it on your system through your package manager.
-
-Then you download the repository through git or manual.
-
-After unpacking or downloading from git you have to switch into the folder of easy-password-generator.
-
-Then run `stack setup` followed by `stack install`.
-
-```
-$ > cd easy-password-generator
-$ > stack setup
-$ > stack install
-```
 
 ### Using cabal
-
 You need to download cabal or install it on your system trhough your package manager.
 
 Then  you download the repository through git or manual.
@@ -58,6 +42,33 @@ $ > cd easy-password-generator
 $ > cabal new-install
 ```
 
+### Using stack
+You need to download stack or install it on your system through your package manager.
+
+Then you download the repository through git or manual.
+
+After unpacking or downloading from git you have to switch into the folder of easy-password-generator.
+
+Then run `stack setup` followed by `stack install`.
+
+```
+$ > cd easy-password-generator
+$ > stack setup
+$ > stack install
+```
+
+### Using nix
+You need to download nix or install it on your system trhough your package manager.
+
+Then  you download the repository through git or manual.
+
+After unpacking or downloading from git you have to switch into the folder of easy-password generator.
+
+Then run `nix-build release.nix`.
+```
+$ > cd easy-password-generator
+$ > nix-build release.nix
+```
 
 ## Credits
 

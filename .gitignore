@@ -1,6 +1,7 @@
-.gitignore
+.ghc*
 .stack-work/
-.travis.yml
+dist-docs
+dist-newstyle
+result
+stack.yaml.lock
 *~
-Easy_password_generator-0.1.0.0-x86_64.AppImage
-shell.nix
