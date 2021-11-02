@@ -1,6 +1,8 @@
 # easy-password-generator
 
-My [rust version](https:///github.com/functional-tim/easypassword) is far superior since it lacks certain security flaws from this version.
+This repository is now archived.
+First my [rust version](https:///github.com/functional-tim/easypassword) is far superior since it lacks certain security flaws from this version.
+Second I don't think I want to put any work into this project anymore.
 
 This password generator was inspired by this comic of Randall Munroe: https://xkcd.com/936/.
 
